@@ -1,0 +1,12 @@
+// import base partials
+@import "base/mixins";
+@import "base/variables";
+@import "base/typograpy";
+
+// import component partials
+@import "components/gallery-item";
+@import "components/detail-page";
+
+// import layout partials
+@import "layout/header";
+@import "layout/main";

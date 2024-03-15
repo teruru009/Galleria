@@ -1,0 +1,325 @@
+// detail page styles
+.detail-page {
+  position: relative;
+  padding: 0 0 75px 0;
+  @media (min-width: $dekstop-xl) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 100px auto 0 auto;
+  }
+
+  .art-visual {
+    position: relative;
+    @media (min-width: $tablet) {
+      width: 475px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .art-visual-link {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background-color:rgba(0, 0, 0, 0.7);
+      @include transition(all .2s ease-out);
+      @media (min-width: $tablet) {
+        top: auto;
+        bottom: 16px;
+      }
+
+      &:hover {
+        @media (hover: hover) and (pointer: fine) {
+          background-color:rgba(151, 151, 151, 0.7);
+          @include transition(all .2s ease-out);
+        }
+      }
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white;
+        padding: 14px 16px;
+        display: block;
+        font-size: 10px;
+        letter-spacing: 2px;
+      }
+
+      svg {
+        margin: 0 14px 0 0;
+      }
+
+    }
+
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 8px 8px;
+    @media (min-width: $tablet) {
+      font-size: 56px;
+      margin: 0 0 24px 0;
+    }
+  }
+
+  .detail-page-heading {
+    background-color: $white;
+    padding: 16px;
+    margin: -50px 0 0 0;
+    width: 70%;
+    position: relative;
+    z-index: 1;
+    @media (min-width: $tablet) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 0;
+      padding: 0 65px 65px 65px;
+      width: 445px;
+    }
+    @media (min-width: $dekstop) {
+      width: 720px
+    }
+    @media (min-width: $dekstop-xl) {
+      width: 449px;
+      left: 410px;
+      right: auto;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: $boulder;
+      margin: 0 0 0 8px;
+      @media (min-width: $tablet) {
+        margin: 0;
+      }
+    }
+
+    img {
+      margin: 16px 0 0 0;
+      width: 64px;
+      height: auto;
+      @media (min-width: $tablet) {
+        width: 128px;
+        margin: 0;
+        position: absolute;
+        bottom: -193px;
+        right: 42px;
+      }
+      @media (min-width: $dekstop) {
+        right: 294px;
+      }
+      @media (min-width: $dekstop-xl) {
+        right: auto;
+        left: 30px;
+        top: 485px;
+      }
+    }
+
+  }
+
+  .detail-page-heading-inner {
+    position: relative;
+  }
+
+  article {
+    position: relative;
+    z-index: 2;
+    @media (min-width: $tablet) {
+      margin: 50px 0 0 0;
+    }
+    @media (min-width: $dekstop-xl) {
+      margin: 0;
+      width: 475px;
+    }
+
+    h2 {
+      font-size: 100px;
+      color: $concrete;
+      font-weight: bold;
+      text-align: right;
+      margin: -50px 0 0 0;
+      @media (min-width: $tablet) {
+        font-size: 200px;
+        text-align: left;
+        margin: 0;
+      }
+      @media (min-width: $dekstop-xl) {
+        text-align: right;
+        line-height: 0.85em;
+      }
+    }
+
+    p {
+      margin: -35px 0 0 0;
+      font-weight: bold;
+      color: $boulder;
+      line-height: 2em;
+      @media (min-width: $tablet) {
+        margin: -115px 0 0 115px;
+        width: 475px;
+      }
+      @media (min-width: $dekstop-xl) {
+        margin: -40px 0 0 0;
+        width: 350px;
+      }
+    }
+
+    a {
+      margin: 70px 0;
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-size: 12px;
+      color: $boulder;
+      display: block;
+      @include transition(all .2s ease-out);
+      @media (min-width: $tablet) {
+        margin: 40px 0 53px 115px;
+      }
+      @media (min-width: $dekstop-xl) {
+        margin: 80px 0 0 0;
+      }
+
+      &:hover {
+        @media (hover: hover) and (pointer: fine) {
+          color: $black;
+          @include transition(all .2s ease-out);
+        }       
+      }
+
+    }
+
+  }
+
+}
+
+// lightbox
+.lightbox {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+
+  .lightbox-inner {
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px;
+  }
+
+  a {
+    text-align: right;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 0 40px 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+  &.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+// slideshow nav
+.slideshow-nav {
+  position: fixed;
+  bottom: 0;
+  padding: 16px 24px;
+  background-color: $white;
+  width: 100%;
+  z-index: 99;
+
+  @media (min-width: $tablet) {
+    padding: 24px;
+  }
+
+  .slideshow-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: $tablet) {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+    @media (min-width: $dekstop) {
+      max-width: 992px;
+    }
+    @media (min-width: $dekstop-xl) {
+      max-width: 1360px;
+    }
+  }
+
+  &::before {
+    content: '';
+    height: 1px;
+    background-color: $mercury;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .slideshow-info {
+
+    h3 {
+      margin: 0 0 8px 0;
+      @media (min-width: $tablet) {
+        font-size: 18px;
+      }
+    }
+
+    span {
+      font-size: 12px;
+      @media (min-width: $tablet) {
+        font-size: 13px;
+      }
+    }
+
+  }
+
+  .slideshow-nav-links {
+
+    a {
+      text-decoration: none;
+      @include transition(all .2s ease-out);
+
+      &:hover {
+
+        path {
+          fill: $boulder;
+          @include transition(all .2s ease-out);
+        }
+
+      }
+
+      &:first-child {
+        margin: 0 23px 0 0;
+      }
+
+    }
+
+  }
+
+}

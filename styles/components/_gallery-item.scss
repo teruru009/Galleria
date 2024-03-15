@@ -1,0 +1,83 @@
+// gallery item styles
+.gallery-item {
+  position: relative;
+  margin: 0 0 24px 0;
+  width: 100%;
+  @media (min-width: $tablet) {
+    width: 47.3%;
+    margin: 0 0 40px 0;
+  }
+  @media (min-width: $dekstop) {
+    width: 30.6%;
+  }
+  @media (min-width: $dekstop-xl) {
+    width: 22.8%;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    cursor: pointer;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 66%);
+    opacity: 0.4;
+    @include transition(all .2s ease-out);
+  }
+
+  &:hover {
+
+    &::before {
+      background: linear-gradient(180deg, rgba(255,255,255,1) 65%, rgba(0,0,0,1) 100%);
+      @include transition(all .6s ease-out);
+    }
+
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gallery-item-info {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    right: 32px;
+    color: $white;
+
+    .gallery-item-title {
+      margin: 0 0 10px 0;
+
+      h2 {
+        font-size: 1.71rem;
+        font-weight: bold;
+        margin: 0;
+      }
+
+    }
+
+    .gallery-item-artist {
+      font-size: 0.92rem;
+      color: #c3c3c2;
+    }
+
+  }
+
+  a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    text-indent: -9999px;
+  }
+
+}
