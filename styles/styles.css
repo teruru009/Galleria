@@ -1,29 +1,39 @@
 body {
   font-family: "Libre Baskerville", serif;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .gallery-item {
   position: relative;
-  margin: 0 0 12px 0; /* Adjusted bottom margin for better spacing */
+  margin: 0 0 24px 0;
   width: 100%;
 }
+
 @media (min-width: 768px) {
   .gallery-item {
-    width: calc(47.3% - 12px); /* Adjusted width and margin for better spacing */
-    margin: 0 0 20px 0;
+    width: 47.3%;
+    margin: 0 0 40px 9px;
   }
 }
+
 @media (min-width: 992px) {
   .gallery-item {
-    width: calc(30.6% - 12px);
+    width: 30.6%;
   }
 }
+
+@media (min-width: 1200px) {
+  .gallery-item {
+    width: 22.8%;
+  }
+}
+
 @media (min-width: 1400px) {
   .gallery-item {
-    width: calc(22.8% - 12px);
+    width: 22.8%; /* Adjust this value as needed for four columns */
   }
 }
+
 @media (hover: hover) and (pointer: fine) {
   .gallery-item {
     cursor: pointer;
@@ -52,21 +62,21 @@ body {
 }
 .gallery-item .gallery-item-info {
   position: absolute;
-  bottom: 12px; /* Adjusted bottom position */
-  left: 12px;
-  right: 12px; /* Adjusted right margin */
+  bottom: 32px;
+  left: 32px;
+  right: 32px;
   color: #FFF;
 }
 .gallery-item .gallery-item-info .gallery-item-title {
-  margin: 0 0 8px 0; /* Adjusted title margin */
+  margin: 0 0 10px 0;
 }
 .gallery-item .gallery-item-info .gallery-item-title h2 {
-  font-size: 2rem; /* Adjusted font size */
+  font-size: 1.3rem;
   font-weight: bold;
   margin: 0;
 }
 .gallery-item .gallery-item-info .gallery-item-artist {
-  font-size: 0.92rem; /* Adjusted artist font size */
+  font-size: 0.92rem;
   color: #c3c3c2;
 }
 .gallery-item a {
@@ -86,9 +96,9 @@ body {
 @media (min-width: 1400px) {
   .detail-page {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
-    margin: 100px auto 0 auto;
+    margin: 56px auto 0 auto;
   }
 }
 .detail-page .art-visual {
@@ -97,6 +107,7 @@ body {
 @media (min-width: 768px) {
   .detail-page .art-visual {
     width: 475px;
+    margin-left: -153px;
   }
 }
 .detail-page .art-visual img {
@@ -153,7 +164,7 @@ body {
   position: relative;
   z-index: 1;
 }
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   .detail-page .detail-page-heading {
     position: absolute;
     right: 0;
@@ -170,8 +181,8 @@ body {
 }
 @media (min-width: 1400px) {
   .detail-page .detail-page-heading {
-    width: 449px;
-    left: 410px;
+    width: 883px;
+    left: 315px;
     right: auto;
   }
 }
@@ -229,12 +240,20 @@ body {
     width: 475px;
   }
 }
+
+@media (min-width: 1200px) {
+  .detail-page article {
+    margin: 0;
+    width: 500px;
+  }
+}
+
 .detail-page article h2 {
   font-size: 100px;
   color: #F3F3F3;
   font-weight: bold;
   text-align: right;
-  margin: -50px 0 0 0;
+  margin: 3px 0 0 0;
 }
 @media (min-width: 768px) {
   .detail-page article h2 {
@@ -245,12 +264,13 @@ body {
 }
 @media (min-width: 1400px) {
   .detail-page article h2 {
-    text-align: right;
+    text-align: left;
     line-height: 0.85em;
+       margin: 196px 0 -151px 29px;
   }
 }
 .detail-page article p {
-  margin: -35px 0 0 0;
+  margin: -80px 0 0 0;
   font-weight: bold;
   color: #7D7D7D;
   line-height: 2em;
@@ -263,8 +283,8 @@ body {
 }
 @media (min-width: 1400px) {
   .detail-page article p {
-    margin: -40px 0 0 0;
-    width: 350px;
+    margin: 51px 0 0 -149px;
+    width: 758px;
   }
 }
 .detail-page article a {
@@ -283,7 +303,7 @@ body {
 }
 @media (min-width: 1400px) {
   .detail-page article a {
-    margin: 80px 0 0 0;
+    margin: 114px -149px 23px;
   }
 }
 @media (hover: hover) and (pointer: fine) {
@@ -361,7 +381,7 @@ body {
 }
 @media (min-width: 1400px) {
   .slideshow-nav .slideshow-nav-inner {
-    max-width: 1360px;
+    max-width: 1296px;
   }
 }
 .slideshow-nav::before {
@@ -409,7 +429,7 @@ header {
 @media (min-width: 768px) {
   header {
     margin: 0 0 40px 0;
-    padding: 40px 0;
+    padding: 20px 0;
   }
 }
 header .header-inner {
@@ -417,6 +437,11 @@ header .header-inner {
   justify-content: space-between;
   align-items: center;
 }
+
+.header-inner {
+  color: #FFF; /* Set your desired color code */
+}
+
 @media (min-width: 768px) {
   header .header-inner {
     max-width: 740px;
@@ -430,7 +455,8 @@ header .header-inner {
 }
 @media (min-width: 1400px) {
   header .header-inner {
-    max-width: 1360px;
+    max-width: 1305px;
+    margin-left: 74px;
   }
 }
 header .site-logo svg {
@@ -471,6 +497,6 @@ main {
 }
 @media (min-width: 1400px) {
   main {
-    max-width: 1360px;
+    max-width: 1320px;
   }
 }/*# sourceMappingURL=styles.css.map */
